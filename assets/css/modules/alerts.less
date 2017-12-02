@@ -1,0 +1,20 @@
+.alert-box {
+	color: @color-white;
+	padding: 10px 15px;
+	font-size: 15px; 	
+
+	a { 
+		text-decoration: none;
+		font-weight: 600; 
+	}
+
+	&.is-error {
+		@color: @admin-green;
+		background-color: fade(@color, 85%);
+		border-color: @color;
+
+		a { 
+			text-transform: uppercase;
+			color: #E2BD2A; }
+	}
+}

@@ -1,0 +1,181 @@
+////////////////////////////////
+// Base Styles
+////////////////////////////////
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html { height: 100%; }
+
+body {
+  background-color: @background;  
+  font-weight: @font-weight;
+  font-family: @font-text;    
+  font-size: @font-size;  
+  color: @font-color;  
+
+  // Admin pages - more settings at bottom
+  &.admin {
+    background: @admin-lightgrey;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {  
+  margin: 0 0 (@spacing * 0.5) 0;
+  text-transform: uppercase;
+  font-weight: @font-weight;
+  font-family: @font-title;
+  color: @font-color; 
+  line-height: 1.4;  
+  padding: 0;  
+}
+
+h1 { font-size: 2.500em;}
+h2 { font-size: 1.333em;}
+h3 { font-size: 1.1em;}
+h4 { font-size: 1.0em;}
+
+h5 { 
+  font-weight: @font-bold;
+  font-size: 1em;  
+}
+
+h6 { 
+  font-style: italic;
+  font-size: 1em;
+}
+
+p {
+  margin-bottom: @spacing * 0.5;
+  font-weight: @font-weight;
+  line-height: 1.5em;
+  font-size: 1em; 
+}
+
+strong { font-weight: @font-semi; }
+
+ul, ol { 
+  padding-left: @spacing * 0.5;
+  line-height: 1.8em;  
+
+  &.no-indent { padding-left: 0; }
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: @font-semi;
+  color: @color-primary;
+
+  &:hover {
+    color: darken(@color-primary, 20%);
+  }
+}
+
+blockquote {
+  padding: (@spacing * 0.25) (@spacing * 0.5);  
+  border-left: 4px solid @color-grey;
+  margin: (@spacing * 2.5) 0;
+  font-size: 1.1em;
+
+  &:hover { border-color: @color-primary; }
+
+  cite {
+    font-size: 0.8em;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+
+  &.img-center {
+    margin: auto;
+  }
+}
+
+hr {
+  margin: (@spacing * 2) 0;
+
+  &.less-margin {
+    margin: 40px 0;
+  }
+
+  &.narrow {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 50px;
+  }
+}
+
+////////////////////////////////
+// Highlighting Content
+////////////////////////////////
+
+::selection { 
+  background: contrast(@color-primary);
+  color: darken(@color-primary, 10%);
+}
+
+////////////////////////////////
+// Content Editable
+////////////////////////////////
+
+[contenteditable="true"] {
+  &:active, &:focus {        
+    outline:none;
+    border:none;    
+  }  
+}
+
+// Code & Pre
+pre {
+  box-shadow: inset 0 2px 5px 3px rgba(0,0,0,0.4);
+  font-family: Consolas, monospace;
+  margin: @spacing (@spacing * 2);    
+  white-space: pre-wrap;    
+  word-break: keep-all;
+  word-wrap: normal;
+  line-height: 1.5em;
+  font-size: 0.8em;
+  background: #333;
+  color: #efefef;  
+  padding: 20px;  
+  cursor: text;
+
+  .lessThanTablet({
+    line-height: 1.4em;
+    font-size: 0.6em;
+  });
+}
+
+////////////////////////////////
+// Admin Specific Styles
+////////////////////////////////
+
+.admin, .login {
+  ::selection { 
+    background: contrast(@admin-lime);
+    color: darken(@admin-lime, 10%);
+  }
+
+  a {
+    color: @admin-green;
+
+    &:hover {
+      color: darken(@admin-green, 20%);
+    }
+  }
+
+  blockquote:hover { border-color: @admin-lime; }
+}

@@ -1,0 +1,42 @@
+table {
+  @row: 50px;
+  .boxShadow;
+  border: none;
+  width: 100%;
+
+  th {
+    color: @color-white !important;
+    background-color: @admin-green;   
+    text-transform: uppercase;    
+    font-family: @font-title;
+    font-weight: @font-thin;
+    font-size: 0.875em !important;
+  }
+
+  tr { 
+    height: @row; 
+
+    &:hover {
+      background: fade(@admin-green, 10%);
+    }
+  }
+
+  td, th { 
+    padding: 0 (@spacing * 0.5) !important; 
+
+    strong { font-weight: @font-semi; }
+
+    &:first-of-type { padding-left: @spacing; }
+    &:last-of-type { padding-right: @spacing; }
+
+    @media @mobile {
+      .truncate(100%);
+      max-width: 120px;
+    }
+  }
+
+  td, th {
+    &.is-number { text-align: right; }
+    &.is-center { text-align: center; }
+  }
+}

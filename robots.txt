@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /application/
+Disallow: /system/
+Allow: /assets/
+
+User-Agent: Facebot
+Allow: /

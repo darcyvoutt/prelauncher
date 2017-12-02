@@ -1,0 +1,77 @@
+// Input
+// .datepicker_container {
+// 	position: relative;
+// 	z-index: @zIndexNone;
+
+// 	&:after {
+// 		z-index: @zIndexContent;
+// 		backgroud: yellow;
+// 		position: absolute;
+// 		display: block;
+// 		content: "\f124";
+// 		font-size: 20px;
+// 		color: red;
+// 		height: 20px;
+// 		width: 20px;
+// 		right: 10px;
+// 		top: 31px;		
+// 	}
+// }
+
+// Datepicker UI
+.ui-datepicker {
+	width: auto;
+
+	// Text 
+	td a {
+		color: @color-darkGrey;
+	}
+
+	// Hover States
+	tr:hover {
+		background-color: fade(@color-darkGrey, 12%);
+	}
+
+	td:hover {
+		background-color: fade(@color-darkGrey, 80%);
+		cursor: pointer;
+		
+		a { color: @color-white; }
+	}
+
+	// Current Day
+	.ui-datepicker-current-day {
+		background-color: fade(@admin-green, 80%);
+		a { color: @color-white; }
+	}
+
+	// Header Row
+	.ui-datepicker-header {
+		background-color: @color-darkGrey;
+		color: @color-white;
+	}
+
+	// Arrow Size
+	@arrow-color: fade(@color-lightGrey, 80%);
+	@arrow-size: 10px; 
+
+	// Next & Prev
+	.ui-datepicker-next, 
+	.ui-datepicker-prev {	
+		border-bottom: @arrow-size solid transparent; 
+  	border-top: @arrow-size solid transparent;  	
+  	height: 0; 
+  	width: 0;   
+  	top: 9px;	
+	}
+	
+	.ui-datepicker-prev {
+		border-right:@arrow-size solid @arrow-color; 
+		left: 10px;
+	}
+ 
+ 	.ui-datepicker-next {
+		border-left: @arrow-size solid @arrow-color;
+		right: 10px;
+ 	}  
+}

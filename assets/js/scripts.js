@@ -1,0 +1,2 @@
+// Foundation Javascript
+$(document).foundation();

@@ -1,0 +1,35 @@
+.tabs {	
+	background: transparent;
+	@radius: 4px;
+
+	.tab-title {
+		&.active {
+			border-right: 1px inset rgba(65,65,65,.1);
+
+			a {				
+				border-top-right-radius: @radius;
+				border-top-left-radius: @radius;
+			}
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				border-top-right-radius: @radius;
+				border-top-left-radius: @radius;
+				color: @color-black;
+			}
+		}
+	}
+
+	&-content {
+		margin-bottom: 0;
+
+		> .content { 
+			padding: 0; 
+
+			.row { padding: 0 !important; }
+		}
+	}	
+}

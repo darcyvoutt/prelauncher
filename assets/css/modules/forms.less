@@ -1,0 +1,85 @@
+// Variables
+@input:   40px;
+
+// Elements
+label {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+select {
+  font-size: 16.2px;
+  padding: 0 20px;  
+}
+
+textarea {
+  padding: 10px 20px; 
+  min-height: 120px;
+  font-size: 16.2px;  
+}
+
+input[type=password],
+input[type=email],
+input[type=text] {
+  height: @input !important;  
+  border: 1px solid #CFCFCF;  
+  background: @color-white;  
+  font-size: 0.9em;
+  box-shadow: none;
+  padding: 0 20px;    
+}
+
+// Spacing
+input, select, textarea {
+  margin-bottom: 20px;
+}
+
+// Upload
+.upload {
+  &-disclaimer {
+    font-style: italic;
+    font-size: 15px;    
+  }
+}
+
+// Form Validator
+.formError {
+
+  .formErrorContent {
+    background: fade(@color-error, 95%);
+    font-family: @font-text;      
+    white-space: nowrap;
+    font-size: 0.875em;
+    position: relative;
+    border-radius: 0px;
+    min-width: 100px;      
+    box-shadow: none;      
+    border: none;  
+    width: auto;
+
+    &:before {   
+      @size: 6px;     
+      border-top: @size solid fade(@color-error, 95%);        
+      border-right: @size solid transparent;
+      border-left: @size solid transparent; 
+      bottom: @size * -1;
+      position: absolute;
+      display: block;   
+      content: "";    
+      left: 5px;        
+      height: 0; 
+      width: 0;               
+    }
+  }
+
+  .formErrorArrow { display: none; }
+}
+
+// IE 9
+
+.ie9 {
+  label { display: block; }
+}

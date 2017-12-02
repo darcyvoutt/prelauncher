@@ -1,0 +1,50 @@
+.login {
+  background: url('@{imgURL}/backgrounds/login.jpg');
+  background-position: center top;
+
+  &-logo {    
+    margin-top: @spacing * 1.5;
+      
+    img {      
+      max-width: 280px; 
+      display: block;
+      margin: auto;
+      height: auto;
+      width: 100%;           
+    }
+  }
+
+  &-form {
+    box-shadow: 2px 2px 1px fade(@color-black, 50%);
+    background: @color-lightGrey;   
+    padding: @spacing;    
+
+    &-title { color: @admin-grey; }
+
+    p { color: fade(@font-color, 80%); }
+
+    .btn, .button, button {
+      background: @admin-green;
+      color: @color-white;
+
+      &:hover {
+        background: @admin-lime;
+        color: @color-white;
+      }
+    }
+
+    .row { padding: 0; }
+
+    .forgot-password {
+      text-decoration: underline;            
+      font-size: 0.85em;
+      margin-top: 10px;      
+    }
+  }
+
+  #footer {
+    margin-top: @spacing;
+    color: @color-white;
+    text-align: center;    
+  }
+}

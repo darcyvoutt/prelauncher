@@ -1,0 +1,79 @@
+.home {  
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-top: @spacing * 2.5;  
+  background-size: cover;
+  color: @color-white;
+
+  a:hover { 
+    color: lighten(@color-primary, 10%); 
+    text-decoration: underline;
+  }
+
+  .row { padding: 0; }
+
+  img {
+    max-width: 100%;
+    display: block; 
+    margin: auto;   
+
+    &.logo-icon { margin-bottom: @spacing * 1.25; }
+    &.logo-text { margin-bottom: @spacing; }
+  } 
+
+  &-timeleft {
+    margin-bottom: @spacing;
+    font-family: @font-title;
+    text-transform: uppercase;
+    letter-spacing: 1.04px;
+    text-align: center;
+  }
+
+  &-title {    
+    color: @color-white;
+    text-align: center;
+    margin: @spacing 0;
+  }
+
+  &-statement {    
+    margin-bottom: @spacing;
+    color: @color-white;
+    text-align: center;
+    font-size: 1em;
+
+    strong { color: lighten(@color-primary, 15%); }
+  }
+
+  input[type=email] { border: none; }
+
+  .formRow {
+    overflow: hidden;
+
+    &-input, &-submit {
+      display: block;
+      float: left;
+    }
+
+    &-input { width: 60%; }
+    &-submit { width: 40%; }
+  }
+
+  &-disclaimer {        
+    color: @color-white;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.778em;
+  }
+
+  .alert-box {
+    border-color: darken(@color-purple, 10%);
+    color: fade(@color-white, 90%);
+    background: @color-purple;       
+    opacity: 0.85;
+  }
+
+  #footer {
+    margin-top: @spacing * 3;
+    color: @color-white;
+  }
+}

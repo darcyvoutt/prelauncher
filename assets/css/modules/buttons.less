@@ -1,0 +1,80 @@
+.button, .btn {
+  @height: 40px;  
+  .browserPrefix(border-radius, 2px) !important;
+  .browserPrefix(box-shadow, inset 0 -2px 0 fade(black, 50%));
+  text-decoration: none !important;      
+  text-transform: uppercase;    
+  background: @color-primary;
+  font-weight: @font-semi;
+  display: inline-block;  
+  line-height: @height;
+  color: @color-white;    
+  position: relative;
+  padding: 0 20px;  
+  height: @height;
+  border: none;
+
+  &-save {
+    background: @color-primary;
+  }
+
+  &-reset {
+    background: lighten(@color-darkGrey, 30%) !important;
+  }
+
+  &:hover {    
+    background: darken(@color-primary, 10);
+    color: @color-white !important;
+  }
+
+  &.is-centered {
+    margin: 0 auto @spacing auto !important;    
+    text-align: center;          
+    display: table;     
+  }
+
+  &.is-right, &.btn-right { 
+    margin-right: 10px;
+    float: right; 
+
+    &:first-of-type {
+      margin-right: 0;
+    }
+  }
+
+  // Spacing when right to inputs with labels
+  &.label-space { margin-top: 20px; }
+
+  &.is-topright { 
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:disabled, &.disabled {
+    cursor: not-allowed;
+  } 
+}
+
+// Reset Button
+.btn-plain, a.btn-plain {
+  color: lighten(@color-darkGrey, 10%);
+  line-height: 80px;
+
+  &:hover {
+    color: @color-black
+  }
+}
+
+// Admin Interface
+.admin { 
+  button, .button, .btn {
+    background: @admin-green;
+    color: @color-white;
+
+    &:hover {
+      background: @admin-lime;
+      color: @color-white;
+    }
+  }
+}

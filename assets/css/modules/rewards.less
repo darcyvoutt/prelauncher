@@ -1,0 +1,199 @@
+.rewards {  
+
+  &-level { background-color: @color-white; }
+
+  strong { color: @color-primary; }
+
+  &-hero {
+    background-image: url('@{imgURL}/backgrounds/rewards.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;  
+    background-size: cover;
+    padding: 130px 0 0 0;           
+    color: @color-white; 
+    position: relative; 
+    overflow: hidden;     
+      
+    @media @mobileLandscape {
+      padding: 60px 0 30px 0 !important;
+    }
+
+    .row { 
+      padding-bottom: 0; 
+      padding-top: 0; 
+    }
+
+    &-copy {
+      padding: 20px 0 40px 0;
+      min-height: 350px;
+
+      @media @mobileLandscape {
+        min-height: 250px;
+        padding: 0;
+      }
+    }          
+
+    &-statement {       
+      text-transform: uppercase;      
+      color: @color-white;      
+      font-size: 1.1em;
+      display: block;
+    }
+    
+    &-cta {
+      text-transform: uppercase;
+      font-family: @font-title;
+      color: @color-primary;
+      font-size: 1.8em;
+    }
+
+    &-image {      
+      position: relative;     
+
+      img { margin: auto; }
+
+      &-spacer {
+        background: transparent;
+        display: block;
+        width: 100%;
+        height: 1px;
+      }
+    }
+
+    // Reward Hero Peakout
+    &.image-fixed-bottom {      
+      .rewards-hero-image {      
+        img {
+          position: absolute;
+          max-width: none;
+          bottom: 0;        
+          right: 0;
+          left: 0;
+
+          @media @tablet {
+            right: 40px;
+            left: auto;
+          }
+        } 
+      } 
+
+      .rewards-hero-copy {
+        padding: 20px 0 40px 0;
+
+        @media @mobile {
+          padding: 0;
+        }
+      }
+    }     
+  }  
+}
+
+#rewards { 
+  background-color: @color-white;   
+
+  &-info {
+    
+    h3 {      
+      text-transform: uppercase;
+      font-weight: @font-semi;
+      letter-spacing: 1.05px;
+      font-size: 1.111em;
+      margin-bottom: 0;
+    }    
+  }
+
+  &-count {
+    text-align: center;
+  }
+
+  &-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;    
+    
+    li {       
+      padding: @spacing;
+      display: block;       
+      height: auto;
+      float: left;
+
+      @media @tablet { width: 50% !important; }
+      @media @mobile { width: 100% !important; }
+
+      &#rewards-info {
+        @media @tablet { 
+          width: 100% !important; 
+          text-align: center;
+          padding: 20px 0;
+        }        
+      }
+
+      &.reward-item {
+        position: relative;
+
+        .reward-item-number { 
+          @size: 40px;         
+          background-color: @color-black;
+          font-family: @font-title;          
+          color: @color-white;        
+          line-height: @size;
+          position: absolute;
+          text-align: center;          
+          border-radius: 50%;
+          left: @size * 0.35;
+          top: @size * 0.35; 
+          font-size: 1em;
+          opacity: 0.75;          
+          height: @size;
+          width: @size;                           
+        }
+      }
+
+      &.is-current {
+        .reward-item-number { background-color: @color-primary; }
+      }
+
+      .title { 
+        text-transform: none;
+        margin: 20px 0 0 0;
+        text-align: center;        
+      }
+
+      img {        
+        max-width: 100%;
+        margin: 0 auto;                
+        height: auto;
+      }      
+    } 
+  }
+
+  &-progress {    
+    border: none;
+    height: 5px;
+    padding: 0; 
+
+    .meter { 
+      background-color: @color-primary; 
+    } 
+  }
+}
+
+ul.social-links {  
+
+  li {    
+    padding: 0 10px 2px 10px;
+    display: block;
+    float: left;
+
+    &.twitter { padding-top: 8px; }
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type { 
+      padding-right: 0;
+      border: none; 
+    }
+  }
+}

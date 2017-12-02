@@ -1,0 +1,57 @@
+////////////////////////////////////////////////
+// Wrap
+////////////////////////////////////////////////
+
+.siteWidth() {
+  max-width: @siteWidth;  
+  margin: 0 auto;
+}
+
+////////////////////////////////////////////////
+// Foundation Framework
+////////////////////////////////////////////////
+
+.row { 
+  padding: @spacing 0; 
+  max-width: 100%;
+
+  &.no-padding { padding: 0 !important;}
+  &.margin-top { margin-top: @spacing * 0.5 !important; }
+
+  .column, .columns {}
+}
+
+////////////////////////////////////////////////
+// Content
+////////////////////////////////////////////////
+
+#header {
+  #nav {
+    .siteWidth();
+  }
+}
+
+#content {
+  .siteWidth();
+  position: relative;
+}
+
+.rewards {
+  &-hero, &-level { 
+    .row { .siteWidth(); }    
+  }
+}
+
+#footer {
+  .siteWidth();
+}
+
+////////////////////////////////////////////////
+// Spacer
+////////////////////////////////////////////////
+
+.spacer {
+  height: @spacing;
+  display: block;
+  width: 100%;
+}

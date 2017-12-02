@@ -1,0 +1,53 @@
+#nav {  
+  background: transparent;
+  min-height: @navHeight;  
+
+  ul {
+    line-height: @navHeight;
+    min-height: @navHeight;
+  }
+
+  li.has-dropdown > a {
+    line-height: @navHeight;
+    height: @navHeight;   
+
+    &:after { top: 50%; }
+  }
+
+  .dropdown {
+    line-height: @navHeight;
+    height: @navHeight;
+
+    li a:hover {
+      background: darken(@admin-lime, 25%);
+    }
+  }
+
+  .top-bar-section {
+    ul li, li a {      
+      background: transparent;
+      line-height: @navHeight;
+      text-decoration: none;
+      height: @navHeight;
+    }    
+
+    ul li a { // Foundation reset
+      padding: 0 16px;
+    }
+
+    a {
+      text-transform: uppercase;      
+      font-family: @font-title;
+      font-weight: @font-thin;
+      font-size: 1em;
+
+      &:hover { background-color: @admin-green; }      
+    }
+
+    li.active a { 
+      color: @admin-lime; 
+
+      &:hover { color: @color-white; }
+    }
+  }  
+}
